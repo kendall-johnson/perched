@@ -4,7 +4,7 @@
 
 ### Your moods matter, track them with
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Ubuntu&weight=700&size=30&pause=1000&color=F0F73B&center=true&width=435&lines=Perched)](https://git.io/typing-svg)
+<img src="https://readme-typing-svg.herokuapp.com?font=Ubuntu&weight=700&size=30&pause=1000&color=F0F73B&center=true&vCenter=true&width=435&lines=Perched" alt="Typing SVG" />
 
 ### Built by: **[Kendall Johnson](https://www.linkedin.com/in/kendalljohnson-se/)**
 
