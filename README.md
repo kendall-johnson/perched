@@ -1,8 +1,8 @@
 <div align="center">
   
-<img src="https://i.imgur.com/OFSvrLJ.png" width="30%" height="15%" />
+<img src="https://i.imgur.com/XL7SHSs.png" width="30%" height="15%" />
 
-### Your moods matter, track them with
+### A Nest for Success and Creativity,
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Ubuntu&weight=700&size=30&pause=1000&color=F0F73B&center=true&vCenter=true&width=435&lines=Perched" alt="Typing SVG" />
 
