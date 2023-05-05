@@ -48,13 +48,13 @@ Click the following link to be redirected to the Wireframe, ERD, and Design Insp
 </div>
 <h2>Lorem Page</h2>
 
-![MoodPage]()
+![Lorem Page]()
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit massa.
 
 <h2>Lorem Page</h2>
 
-![AddAMoodPage]()
+![Lorem Page]()
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit massa.
 
@@ -65,39 +65,39 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ### Lorem Page
 
-![loginPage]()
+![Lorem Page]()
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit massa.
 
 ### Lorem Page
 
-![HomePage]()
+![Lorem Page]()
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit massa.
 
 ### Lorem Page
 
-![ViewMoodPage]()
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit massa.
-
-
-### Lorem Page
-
-![AddAMood]()
+![Lorem Page]()
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit massa.
 
 
 ### Lorem Page
 
-![RelaxPage]()
+![Lorem Page]()
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit massa.
 
-### Lorem Screen
 
-![LoadingScreen]()
+### Lorem Page
+
+![Lorem Page]()
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit massa.
+
+### Lorem Page
+
+![Lorem Page]()
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit massa.
 
