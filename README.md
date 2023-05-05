@@ -23,9 +23,7 @@
 ![Visual Studio Code](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
 
   
-**_Click the following link to be redirected to the live version of the code!_**
-  
-  <a href="https://www.kendalljohnson.dev/" target="_blank">Perched</a>
+**_Click the following link to be redirected to the live version of the code!_** 
 
 ## [Perched](https://www.kendalljohnson.dev/)
 
