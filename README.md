@@ -54,7 +54,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <h2>Lorem Page</h2>
 
-![AddAMoodPage](https://i.imgur.com/s6tkw27.png)
+![AddAMoodPage]()
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit massa.
 
@@ -65,39 +65,39 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ### Lorem Page
 
-![loginPage](https://i.imgur.com/JlA0Oyx.gif)
+![loginPage]()
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit massa.
 
 ### Lorem Page
 
-![HomePage](https://i.imgur.com/15kurIf.gif)
+![HomePage]()
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit massa.
 
 ### Lorem Page
 
-![ViewMoodPage](https://i.imgur.com/ERy8w7g.gif)
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit massa.
-
-
-### Lorem Page
-
-![AddAMood](https://i.imgur.com/7R12k9C.gif)
+![ViewMoodPage]()
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit massa.
 
 
 ### Lorem Page
 
-![RelaxPage](https://i.imgur.com/vITANXb.gif)
+![AddAMood]()
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit massa.
+
+
+### Lorem Page
+
+![RelaxPage]()
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit massa.
 
 ### Lorem Screen
 
-![LoadingScreen](https://i.imgur.com/FjWzP69.gif)
+![LoadingScreen]()
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit massa.
 
