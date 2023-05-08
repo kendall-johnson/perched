@@ -9,6 +9,7 @@ export default function SignUpForm({  setUser,  showLogin, setShowLogin }) {
     email: '',
     password: '',
     confirm: '',
+    userType: '',
     error: '',
   });
 
@@ -105,6 +106,34 @@ export default function SignUpForm({  setUser,  showLogin, setShowLogin }) {
           onChange={handleChange}
           required
         />
+      </div>
+      <div id="select">
+        <div className="mb-2 block">
+        <label htmlFor="account_type" className="block text-sm font-semibold text-gray-800">Account Type</label>
+        </div>
+        <select
+          
+          required={true}
+        >
+          <option
+            id="freelancer"
+            name="userType"
+            value="customer"
+            checked={formData.userType === "customer"}
+            onChange={handleChange}
+            className="mr-2">
+              Customer
+          </option>
+          <option
+            id="freelancer"
+            name="userType"
+            value="freelancer"
+            checked={formData.userType === "freelancer"}
+            onChange={handleChange}
+            className="mr-2">
+            Freelancer
+          </option>
+        </select>
       </div>
       <div className="mt-6">
         <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600">

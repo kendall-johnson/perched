@@ -17,13 +17,6 @@ const userSchema = new Schema({
     trim: true,
     required: true,
     minLength: 8,
-    validate: {
-      validator: function (v) {
-        // Regular expression to check if password meets complexity requirements
-        return /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^\da-zA-Z]).{8,}$/g.test(v);
-      },
-      message: props => `${props.value} is not a valid password. Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and may include special characters.`
-    },
   },
   userType: {
     type: String,
