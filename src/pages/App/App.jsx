@@ -4,6 +4,7 @@ import { getUser } from '../../utilities/users-service';
 import { Routes, Route } from 'react-router-dom';
 import AuthPage from '../AuthPage/AuthPage';
 import Sidebar from '../../components/Navbar/Sidebar';
+import HomePage from '../HomePage/HomePage';
 
 
 
@@ -24,9 +25,9 @@ function App() {
         <>
           <Sidebar user={user} updateUser={updateUser} className="w-64" />
           <div className="flex-1">
-            {/* <Routes>
+            <Routes>
               <Route path='/home' element={<HomePage />} />
-            </Routes> */}
+            </Routes>
           </div>
         </>
         :

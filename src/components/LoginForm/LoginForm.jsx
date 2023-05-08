@@ -29,7 +29,7 @@ setError('Log In Failed - Try Again');
     <>
     <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
     <div className="w-full p-6 m-auto bg-white rounded-md shadow-xl lg:max-w-xl">
-        <h1 className="text-3xl font-semibold text-center text-purple-700 uppercase">
+        <h1 className="text-3xl font-semibold text-center text-yellow-700 uppercase">
             WELCOME BACK
         </h1>
         <form className="mt-6" onSubmit={handleSubmit}>
@@ -43,7 +43,7 @@ setError('Log In Failed - Try Again');
                 <input
                     type="email"
                     name="email"
-                    className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                    className="block w-full px-4 py-2 mt-2 text-yellow-700 bg-white border rounded-md focus:border-yellow-700 focus:ring-yellow-700 focus:outline-none focus:ring focus:ring-opacity-40"
                     value={credentials.email} 
                     onChange={handleChange} required
                 />
@@ -57,7 +57,7 @@ setError('Log In Failed - Try Again');
                 </label>
                 <input
                     type="password"
-                    className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                    className="block w-full px-4 py-2 mt-2 text-yellow-700 bg-white border rounded-md focus:border-yellow-700 focus:ring-yellow-700 focus:outline-none focus:ring focus:ring-opacity-40"
                     name="password" 
                     value={credentials.password} 
                     onChange={handleChange} 
@@ -65,7 +65,7 @@ setError('Log In Failed - Try Again');
                 />
             </div>
             <div className="mt-6">
-                <button  type="submit" className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600">
+                <button  type="submit" className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-yellow-700 rounded-md hover:bg-yellow-600 hover:rounded-full hover:text-black focus:outline-none focus:bg-yellow-600">
                     Login
                 </button>
             </div>
@@ -76,7 +76,7 @@ setError('Log In Failed - Try Again');
             {" "}
             Don't have an account?{" "}
             <a
-                className="font-medium text-purple-600 hover:underline"
+                className="font-medium text-yellow-600 hover:underline"
                 onClick={() => setShowLogin(!showLogin)}>{showLogin ? 'SIGN UP' : 'LOG IN'}
             
                
