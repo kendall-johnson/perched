@@ -60,12 +60,12 @@ export default function HomePage({ user, updateUser }) {
           <span className="block w-2 h-2 mr-2 rounded-full bg-indigo-500"></span>
           <span className="uppercase text-sm text-gray-100 font-medium tracking-tight">Explore Perched</span>
         </div>
-        <h1 className="text-6xl sm:text-8xl xl:text-9xl font-heading text-white mb-12">Little things make a big difference.</h1>
+        <h1 className="text-6xl sm:text-8xl xl:text-9xl font-heading text-white mb-12"><span className='text-blue-500'>Little things</span> make a <span className='text-yellow-700'>big difference.</span></h1>
         <p className="text-lg text-gray-100 mb-20">Find the person to make your dreams become reality.</p>
         <div className="flex flex-col sm:flex-row">
           <Link className="group relative inline-block h-16 w-full sm:w-48 mb-4 sm:mb-0 sm:mr-6 bg-white rounded" to="/login">
             <div className="absolute top-0 left-0 transform -translate-y-1 -translate-x-1 w-full h-full group-hover:translate-y-0 group-hover:translate-x-0 transition duration-300">
-              <div className="flex h-full w-full items-center justify-center bg-yellow-500 border-2 border-white rounded">
+              <div className="flex h-full w-full items-center justify-center bg-yellow-700 border-2 border-white rounded">
                 <span className="text-base font-semibold text-black uppercase">Get started</span>
               </div>
             </div>
@@ -123,18 +123,18 @@ export default function HomePage({ user, updateUser }) {
         <span className="block w-2 h-2 mr-2 rounded-full bg-indigo-500"></span>
         <span className="uppercase text-sm font-medium tracking-tight">HOW IT WORKS</span>
       </div>
-      <h1 className="text-6xl sm:text-7xl font-heading font-semibold mb-14">How does it work?</h1>
+      <h1 className="text-6xl sm:text-7xl font-heading font-semibold mb-14 text-blue-700">How does it work?</h1>
       <p className="text-2xl mb-18">Perched offers a marketplace for all types of freelance work, so you can stop worrying about the tough work and complete your passion projects quicker.</p>
     </div>
     <div className="max-w-xs mx-auto md:max-w-none">
       <div className="flex flex-wrap justify-between items-center -mx-4">
         <div className="w-full lg:w-1/3 px-4 mb-10 lg:mb-0">
           <div className="max-w-xs mx-auto mb-10">
-            <span className="block mb-6 text-5xl font-heading text-yellowGray-700">01</span>
+            <span className="block mb-6 text-5xl font-heading text-yellow-700">01</span>
             <h4 className="text-3xl font-heading font-semibold">Browse and search for gigs</h4>
           </div>
           <div className="max-w-xs mx-auto">
-            <span className="block mb-6 text-5xl font-heading text-yellowGray-700">02</span>
+            <span className="block mb-6 text-5xl font-heading text-yellow-700">02</span>
             <h4 className="text-3xl font-heading font-semibold">Review gig details and seller profiles</h4>
           </div>
         </div>
@@ -143,11 +143,11 @@ export default function HomePage({ user, updateUser }) {
         </div>
         <div className="w-full lg:w-1/3 px-4">
           <div className="max-w-xs mx-auto mb-10">
-            <span className="block mb-6 text-5xl font-heading text-yellowGray-700">03</span>
+            <span className="block mb-6 text-5xl font-heading text-yellow-700">03</span>
             <h4 className="text-3xl font-heading font-semibold">Place an order</h4>
           </div>
           <div className="max-w-xs mx-auto">
-            <span className="block mb-6 text-5xl font-heading text-yellowGray-700">04</span>
+            <span className="block mb-6 text-5xl font-heading text-yellow-700">04</span>
             <h4 className="text-3xl font-heading font-semibold">Get work delivered and provide feedback</h4>
           </div>
         </div>
@@ -177,10 +177,10 @@ export default function HomePage({ user, updateUser }) {
                 <h4 className="text-3xl font-medium text-white">Can I get a refund?</h4>
                 <p className="hidden group-hover:block mt-5 text-lg text-gray-200">Refunds are not accepted currently. This is why we encourage you to reach out to the freelancer before purchase so that you can confirm the expected product can be achieved.</p>
               </div>
-              <div className="flex-shrink-0 group-hover:hidden flex w-14 h-14 items-center justify-center bg-indigo-500 rounded-full">
+              <div className="flex-shrink-0 group-hover:hidden flex w-14 h-14 items-center justify-center bg-blue-500 rounded-full">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="16" y="7" width="2" height="16" rx="1" transform="rotate(90 16 7)" fill="white"></rect><rect x="7" width="2" height="16" rx="1" fill="white"></rect></svg>
               </div>
-              <div className="flex-shrink-0 hidden group-hover:flex w-14 h-14 items-center justify-center bg-gray-800 rounded-full">
+              <div className="flex-shrink-0 hidden group-hover:flex w-14 h-14 items-center justify-center bg-yellow-700 rounded-full">
                 <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="16" width="2" height="16" rx="1" transform="rotate(90 16 0)" fill="white"></rect></svg>
               </div>
             </div>
@@ -192,10 +192,10 @@ export default function HomePage({ user, updateUser }) {
                 <h4 className="text-3xl font-medium text-white">How does billing work?</h4>
                 <p className="hidden group-hover:block mt-5 text-lg text-gray-200">Thanks to Stripe, the checkout process is smooth and most forms of payment are accepted! Find the gig you want to purchase and follow the checkout instructions to complete an order!</p>
               </div>
-              <div className="flex-shrink-0 group-hover:hidden flex w-14 h-14 items-center justify-center bg-indigo-500 rounded-full">
+              <div className="flex-shrink-0 group-hover:hidden flex w-14 h-14 items-center justify-center bg-blue-500 rounded-full">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="16" y="7" width="2" height="16" rx="1" transform="rotate(90 16 7)" fill="white"></rect><rect x="7" width="2" height="16" rx="1" fill="white"></rect></svg>
               </div>
-              <div className="flex-shrink-0 hidden group-hover:flex w-14 h-14 items-center justify-center bg-gray-800 rounded-full">
+              <div className="flex-shrink-0 hidden group-hover:flex w-14 h-14 items-center justify-center bg-yellow-700 rounded-full">
                 <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="16" width="2" height="16" rx="1" transform="rotate(90 16 0)" fill="white"></rect></svg>
               </div>
             </div>
@@ -206,10 +206,10 @@ export default function HomePage({ user, updateUser }) {
                 <h4 className="text-3xl font-medium text-white">How can I become a Freelancer on Perched?</h4>
                 <p className="hidden group-hover:block mt-5 text-lg text-gray-200">During the account creation process, you have the option to select whether you wish to be a customer or freelancer, there is where you make the decision.</p>
               </div>
-              <div className="flex-shrink-0 group-hover:hidden flex w-14 h-14 items-center justify-center bg-indigo-500 rounded-full">
+              <div className="flex-shrink-0 group-hover:hidden flex w-14 h-14 items-center justify-center bg-blue-500 rounded-full">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="16" y="7" width="2" height="16" rx="1" transform="rotate(90 16 7)" fill="white"></rect><rect x="7" width="2" height="16" rx="1" fill="white"></rect></svg>
               </div>
-              <div className="flex-shrink-0 hidden group-hover:flex w-14 h-14 items-center justify-center bg-gray-800 rounded-full">
+              <div className="flex-shrink-0 hidden group-hover:flex w-14 h-14 items-center justify-center bg-yellow-700 rounded-full">
                 <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="16" width="2" height="16" rx="1" transform="rotate(90 16 0)" fill="white"></rect></svg>
               </div>
             </div>
@@ -220,10 +220,10 @@ export default function HomePage({ user, updateUser }) {
                 <h4 className="text-3xl font-medium text-white">Can I delete my account if I no longer wish to use Perched?</h4>
                 <p className="hidden group-hover:block mt-5 text-lg text-gray-200">While we would hate to see you leave, you may visit your account settings at any time to remove your account. Keep in mind, this decision is permanent and you will no longer be able to access the account.</p>
               </div>
-              <div className="flex-shrink-0 group-hover:hidden flex w-14 h-14 items-center justify-center bg-indigo-500 rounded-full">
+              <div className="flex-shrink-0 group-hover:hidden flex w-14 h-14 items-center justify-center bg-blue-500 rounded-full">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="16" y="7" width="2" height="16" rx="1" transform="rotate(90 16 7)" fill="white"></rect><rect x="7" width="2" height="16" rx="1" fill="white"></rect></svg>
               </div>
-              <div className="flex-shrink-0 hidden group-hover:flex w-14 h-14 items-center justify-center bg-gray-800 rounded-full">
+              <div className="flex-shrink-0 hidden group-hover:flex w-14 h-14 items-center justify-center bg-yellow-700 rounded-full">
                 <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="16" width="2" height="16" rx="1" transform="rotate(90 16 0)" fill="white"></rect></svg>
               </div>
             </div>

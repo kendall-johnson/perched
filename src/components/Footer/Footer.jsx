@@ -52,7 +52,7 @@ export default function Footer() {
             <span className="block w-2 h-2 mr-2 rounded-full bg-indigo-500"></span>
             <span className="uppercase text-sm font-medium tracking-tight">STAY CONNECTED</span>
           </div>
-          <h1 className="max-w-md text-5xl xs:text-7xl xl:text-8xl font-heading font-semibold mb-12">We are Perched.</h1>
+          <h1 className="max-w-md text-5xl xs:text-7xl xl:text-8xl font-heading font-semibold mb-12">We are <span className='text-yellow-700'>Perched.</span></h1>
           <a className="inline-block py-5 px-6 md:pl-8 md:pr-16 border border-gray-50 hover:border-gray-100 rounded-3xl" href="#">
             <div className="flex flex-wrap md:flex-nowrap items-center">
             </div>
