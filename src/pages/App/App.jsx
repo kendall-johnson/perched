@@ -4,6 +4,8 @@ import { getUser } from '../../utilities/users-service';
 import { Routes, Route } from 'react-router-dom';
 import AuthPage from '../AuthPage/AuthPage';
 import HomePage from '../HomePage/HomePage';
+import GigsPage from '../GigsPage/GigsPage';
+import GigForm from '../../components/GigForm/GigForm';
 
 
 
@@ -38,6 +40,8 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage user={user} updateUser={updateUser}/>} />
             <Route path="/login" element={<AuthPage setUser={updateUser} />} />
+            <Route path="/gigs" element={<GigsPage user={user} />} />
+            <Route path="/create-gig" element={<GigForm user={user} />} />
           </Routes>          
         {/* </div> */}
       </main>

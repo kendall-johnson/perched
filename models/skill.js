@@ -2,21 +2,9 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const SkillSchema = new Schema({
-  feeling: {
-    type: String,
-    required: true,
-  },
-  emotions: {
+  skill: {
     type: [String],
     required: true,
-  },
-  triggers: {
-    type: [String],
-    required: true,
-  },
-  reflection: {
-    type: String,
-    default: ""
   },
   user: {
     type: mongoose.Schema.Types.ObjectId,

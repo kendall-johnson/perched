@@ -35,16 +35,16 @@ async function editSkill(req, res) {
     const updatedSkill = {
         skill: req.body.skill
     };
-    Gig.findByIdAndUpdate(id, updatedSkill, { new: true })
-      .then(gig => res.json(gig))
+    Skill.findByIdAndUpdate(id, updatedSkill, { new: true })
+      .then(skill => res.json(skill))
       .catch(err => res.status(500).json({ message: err.message }));
 }
 
 async function deleteSkill(req, res) {
     const id = req.params.id;
     Skill.findByIdAndRemove(id)
-      .then(gig => {
-        if (!gig) {
+      .then(skill => {
+        if (!skill) {
           return res.status(404).json({ message: "Skill not found" });
         }
         res.json({ message: "Skill successfully deleted" });

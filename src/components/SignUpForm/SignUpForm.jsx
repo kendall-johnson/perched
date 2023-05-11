@@ -3,7 +3,7 @@ import { signUp } from '../../utilities/users-service';
 import { useNavigate } from 'react-router-dom';
 
 export default function SignUpForm({  setUser,  showLogin, setShowLogin }) {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -19,7 +19,7 @@ export default function SignUpForm({  setUser,  showLogin, setShowLogin }) {
       const { error, confirm, ...data } = formData;
       const user = await signUp(data);
       setUser(user);
-      // navigate('/home');
+      navigate('/home');
     } catch {
       setFormData({ ...formData, error: 'Sign Up Failed - Try Again' });
     }

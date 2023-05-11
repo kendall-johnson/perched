@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { login } from '../../utilities/users-service';
 import { Link } from 'react-router-dom';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function LoginForm({ setUser, showLogin, setShowLogin }) {
-// const navigate = useNavigate();
+const navigate = useNavigate();
 const [credentials, setCredentials] = useState({
 email: '',
 password: ''
@@ -20,8 +20,8 @@ async function handleSubmit(evt) {
 evt.preventDefault();
 try {
 const user = await login(credentials);
-console.log(user)
 setUser(user);
+navigate('/');
 } catch {
 setError('Log In Failed - Try Again');
 }
