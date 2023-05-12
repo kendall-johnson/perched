@@ -6,6 +6,10 @@ export function index() {
     return sendRequest(BASE_URL)
 }
 
+export function getGig(gigId) {
+    return sendRequest(`${BASE_URL}/${gigId}`)
+}
+
 export function createGig(formData){
     console.log(formData)
   return sendRequest(`${BASE_URL}/new`, 'POST', formData)

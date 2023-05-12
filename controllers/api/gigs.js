@@ -4,7 +4,8 @@ module.exports = {
     index,
     newGig,
     editGig,
-    deleteGig
+    deleteGig,
+    getGig
 }
 
 async function index(req, res) {
@@ -18,11 +19,11 @@ async function index(req, res) {
 
 async function newGig(req, res) {
   // Use the Multer middleware to upload the photo(s) to S3
-  upload.array('photo', 10)(req, res, async (err) => {
-    if (err) {
-      console.log(err);
-      return res.status(500).json({ error: err.message });
-    }
+  // upload.array('photo', 10)(req, res, async (err) => {
+  //   if (err) {
+  //     console.log(err);
+  //     return res.status(500).json({ error: err.message });
+  //   }
 
     // Create a new Gig object with the data from the request
     const newGig = new Gig({
@@ -30,14 +31,14 @@ async function newGig(req, res) {
       title: req.body.title,
       description: req.body.description,
       category: req.body.category,
-      tier: req.tier._id,
+      // tier: req.tier._id,
     });
 
     // Add the S3 URLs and keys for the uploaded photos to the newGig object
-    newGig.photo = req.files.map((file) => ({
-      url: file.location,
-      key: file.key,
-    }));
+    // newGig.photo = req.files.map((file) => ({
+    //   url: file.location,
+    //   key: file.key,
+    // }));
 
     try {
       // Save the new Gig object to the database
@@ -48,8 +49,8 @@ async function newGig(req, res) {
     } catch (error) {
       res.status(500).json({ error: error.message });
     }
-  });
-}
+  };
+
 
 async function editGig(req, res) {
   const id = req.params.id;
@@ -100,4 +101,14 @@ async function deleteGig(req, res) {
       res.json({ message: "Gig successfully deleted" });
     })
     .catch((err) => res.status(500).json({ message: err.message }));
+}
+
+
+async function getGig(req, res) {
+  try {
+    const gig = await Gig.findById(req.params.id)
+    res.status(200).json(gig);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
 }

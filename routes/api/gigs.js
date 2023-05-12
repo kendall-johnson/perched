@@ -5,6 +5,8 @@ const gigsCtrl = require('../../controllers/api/gigs');
 // GET /api/gigs
 router.get('/', gigsCtrl.index);
 
+router.get('/:id', gigsCtrl.getGig)
+
 // GET /api/gigs/new
 router.post('/new', gigsCtrl.newGig);
 

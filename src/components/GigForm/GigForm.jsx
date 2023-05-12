@@ -40,7 +40,7 @@ export default function GigForm() {
     'title': title,
     'category': category,
     'description': description,
-    'photo': photo[0]
+    // 'photo': photo[0]
     }
     try {
       const response = await createGig(formData);
@@ -102,14 +102,13 @@ export default function GigForm() {
               </div>
             </div>
           </div>
-          <div className="flex flex-wrap items-start -mx-4 pb-8 mb-8 border-b border-gray-400 border-opacity-20">
+          {/* <div className="flex flex-wrap items-start -mx-4 pb-8 mb-8 border-b border-gray-400 border-opacity-20">
             <div className="w-full sm:w-1/3 px-4 mb-6 sm:mb-0">
               <span className="block text-sm font-medium text-gray-100">Photo</span>
               <span className="text-xs text-gray-400">Show off your skills, this is where you showcase what you are offering.</span>
-            </div>
-            <div className="w-full sm:w-2/3 px-4">
+            </div> */}
+            {/* <div className="w-full sm:w-2/3 px-4">
               <div className="flex flex-wrap sm:flex-nowrap max-w-xl">
-                
                 <div className="w-full py-8 px-4 text-center border-dashed border border-gray-400 hover:border-white focus:border-blue-500 rounded-lg">
                   <div className="relative group h-14 w-14 mx-auto mb-4">
                     <div className="flex items-center justify-center h-14 w-14 bg-blue-500 group-hover:bg-blue-600 rounded-full">
@@ -126,8 +125,8 @@ export default function GigForm() {
                   <span className="text-xs text-gray-300 font-semibold">PNG or JPG up to 10MB</span>
                 </div>
               </div>
-            </div>
-          </div>
+            </div> */}
+          {/* </div> */}
           <div className="flex flex-wrap items-start -mx-4 pb-8 mb-8 border-b border-gray-400 border-opacity-20">
             <div className="w-full sm:w-1/3 px-4 mb-5 sm:mb-0">
               <span className="block mt-2 text-sm font-medium text-gray-100">Bio</span>

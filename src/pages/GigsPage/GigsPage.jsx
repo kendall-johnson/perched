@@ -3,11 +3,11 @@ import React from 'react'
 import Footer from '../../components/Footer/Footer'
 import { Link } from 'react-router-dom'
 import Gig from '../../components/Gig/Gig'
+import GigList from '../../components/GigList/GigList'
 
 export default function GigsPage() {
   return (
     <>
-    <Navbar />
     <section className="py-16 bg-gray-900">
   <div className="container px-4 mx-auto">
     <div className="max-w-6xl mx-auto">
@@ -28,14 +28,13 @@ export default function GigsPage() {
                     <li className="mb-4"><Link className="inline-block font-medium text-black hover:text-indigo-500" to="">Graphics & Design</Link></li>
                     <li className="mb-4"><Link className="inline-block font-medium text-black hover:text-indigo-500" to="">Video & Animation</Link></li>
                     <li className="mb-4"><Link className="inline-block font-medium text-black hover:text-indigo-500" to="">Music & Audio</Link></li>
-                    <li className="mb-4"><Link className="inline-block font-medium text-black hover:text-indigo-500" to="">Programming & Web Development</Link></li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <Gig />
+        <GigList />
         </div>
       </div>
     </div>

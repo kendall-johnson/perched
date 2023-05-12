@@ -1,58 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Footer from '../../components/Footer/Footer'
+import Navbar from '../../components/Navbar/Navbar'
 
 export default function HomePage({ user, updateUser }) {
   return (
     <>
     <section className="relative xl:pb-52 bg-black overflow-hidden">
   <div className="hidden xl:block absolute bottom-0 left-0 ml-20 2xl:ml-52 px-20">
-    <img className="animate-bouncingSlow max-w-sm xl:max-w-md -mb-20" src="suncealand-assets/background/red-lines.svg" alt=""/>
-    <img className="absolute top-0 left-1/2 mt-20 transform -translate-x-1/2" src="suncealand-assets/images/apps-avatar-dashboard-app.png" alt=""/>
+    <img className="animate-bouncingSlow max-w-sm xl:max-w-md -mb-20" src="" alt=""/>
+    <img className="absolute top-0 left-1/2 mt-20 transform -translate-x-1/2" src="" alt=""/>
   </div>
-  <nav className="relative z-10">
-    <div className="flex px-4 md:px-14 py-6 items-center relative">
-      <a className="inline-block text-2xl font-bold mr-8 xl:mr-17" href="#">
-        <img src="suncealand-assets/logos/suncealand-white.svg" alt=""/>
-      </a>
-      <div className="hidden lg:block relative w-full max-w-xs xl:max-w-md 2xl:max-w-lg mr-8 xl:mr-20 2xl:mr-52">
-        <input className="w-full pl-20 py-5 pr-5 h-14 bg-gray-900 rounded-lg placeholder-gray-300 text-gray-300 outline-none" type="search" placeholder="Search"/>
-        <button className="inline-block absolute top-1/2 left-0 ml-8 transform -translate-y-1/2" type="submit">
-          <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="9" stroke="white" stroke-width="2"></circle><rect x="16" y="15.4142" width="2" height="7.1336" rx="1" transform="rotate(-45 16 15.4142)" fill="white"></rect></svg>
-        </button>
-      </div>
-      <div className="hidden lg:block">
-        <ul className="flex items-center">
-          <li className="relative group mr-14">
-            <button className="inline-block text-left text-base font-medium text-white">
-              <div className="flex items-center">
-                <span className="mr-3">Categories</span>
-                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M11.332 0.999974L10.3887 0.0566406L6.66536 3.77997L5.9987 4.5L5.33203 3.77997L1.6087 0.0566402L0.665365 0.999974L5.9987 6.33331L11.332 0.999974Z" fill="currentColor"></path>
-                </svg>
-              </div>
-            </button>
-            <div className="hidden group-hover:block absolute z-20 bottom-0 left-0 w-52 pt-4 transform translate-y-full">
-              <div className="py-4 px-6 bg-white rounded-lg border-2 border-blueGray-900"><a className="block mb-2 text-xs" href="#">Graphics & Designer</a><a className="block mb-2 text-xs" href="#">Video & Animation</a><a className="block text-xs" href="#">Music & Audio</a><a className="block mb-2 text-xs" href="#">Programming & Web Design</a></div>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div className="hidden lg:block ml-auto">
-        <Link className="relative group inline-flex h-12 w-24 items-center justify-center border border-white rounded-lg overflow-hidden" to="/login">
-          <span className="relative z-10 font-semibold text-white group-hover:text-black transition duration-500">Login</span>
-          <div className="absolute top-0 left-0 h-full w-28 transform -translate-x-full -ml-1 group-hover:-translate-x-0 bg-white transition duration-500 ease-linear"></div>
-        </Link>
-      </div>
-      <button className="lg:hidden ml-auto navbar-burger flex p-1 items-center text-white">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-          <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-          <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-      </button>
-    </div>
-  </nav>
+  <Navbar />
   <div className="container px-4 mx-auto">
     <div className="relative pt-28 xl:pt-52 mb-24 xl:mb-0">
       <div className="max-w-lg mx-auto xl:mr-0 relative">
@@ -74,8 +33,8 @@ export default function HomePage({ user, updateUser }) {
       </div>
     </div>
     <div className="xl:hidden relative">
-      <img className="animate-bouncingSlow h-135 mx-auto -mb-12" src="suncealand-assets/background/red-lines.svg" alt=""/>
-      <img className="absolute top-0 left-1/2 w-full xs:max-w-md transform -translate-x-1/2" src="suncealand-assets/images/apps-avatar-dashboard-app.png" alt=""/>
+      <img className="animate-bouncingSlow h-135 mx-auto -mb-12" src="" alt=""/>
+      <img className="absolute top-0 left-1/2 w-full xs:max-w-md transform -translate-x-1/2" src="" alt=""/>
     </div>
   </div>
   <div className="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
@@ -83,7 +42,7 @@ export default function HomePage({ user, updateUser }) {
     <nav className="relative pt-8 pb-8 bg-white h-full overflow-y-auto">
       <div className="flex flex-col px-6 h-full">
         <a className="inline-block text-2xl font-bold ml-8 mb-16" href="#">
-          <img src="suncealand-assets/logos/suncealand-dark.svg" alt=""/>
+          <img src="" alt=""/>
         </a>
         <ul className="w-full mb-auto pb-16">
           <li className="group mb-6">
@@ -139,7 +98,7 @@ export default function HomePage({ user, updateUser }) {
           </div>
         </div>
         <div className="w-full lg:w-1/3 px-4 mb-10 lg:mb-0">
-          <img className="mx-auto" src="suncealand-assets/images/avatar-girl-circle.png" alt=""/>
+          <img className="mx-auto" src="" alt=""/>
         </div>
         <div className="w-full lg:w-1/3 px-4">
           <div className="max-w-xs mx-auto mb-10">
@@ -166,7 +125,7 @@ export default function HomePage({ user, updateUser }) {
           </div>
           <h1 className="text-5xl xs:text-7xl md:text-8xl font-heading font-semibold text-white mb-18">Help Desk</h1>
           <p className="text-2xl text-gray-200 mb-20">You have questions, we have answers!</p>
-          <img className="h-142 w-full max-w-md rounded-4xl" src="suncealand-assets/images/laptop-on-table-photo.png" alt=""/>
+          <img className="h-142 w-full max-w-md rounded-4xl" src="" alt=""/>
         </div>
       </div>
       <div className="w-full lg:w-2/3 px-4">

@@ -14,6 +14,7 @@ app.use(require('./config/checkToken'));
 
 //routes
 app.use('/api/users', require('./routes/api/users'));
+app.use('/api/gigs', require('./routes/api/gigs'));
 
 
 const ensureLoggedIn = require('./config/ensureLoggedIn');

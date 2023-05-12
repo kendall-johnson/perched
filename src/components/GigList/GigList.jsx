@@ -14,11 +14,11 @@ export default function GigList() {
     },[])
   return (
     <>
-        <div>
+       
             {gigs.map((gig) => (
                 <Gig key={gig._id} gig={gig} />
             ))}
-        </div>
+      
     </>
   )
 }
