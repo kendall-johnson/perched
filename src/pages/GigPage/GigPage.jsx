@@ -4,10 +4,16 @@ import Footer from '../../components/Footer/Footer'
 import { Link, useParams } from 'react-router-dom'
 import { getGig } from '../../utilities/gigs-api';
 import TierCard from '../../components/TierCard/TierCard';
+import ReviewList from '../../components/ReviewList/ReviewList';
 
 export default function GigPage() {
     let { gigId } = useParams();
     const [gigData, setGigData] = useState(null);
+    const [activeTab, setActiveTab] = useState('gig-description')
+
+    const toggleTab = (tab) => {
+        setActiveTab(tab);
+    };
     
     useEffect(() => {
         getGig(gigId)
@@ -118,9 +124,34 @@ export default function GigPage() {
                 </div>
                 <div className="pt-9 border-t border-gray-100">
                 <div className="flex justify-center max-w-5xl pb-9 mx-auto border-b border-gray-100">
-                  <a className="inline-block w-full md:w-auto mb-4 md:mb-0 md:mr-20 lg:mr-36 text-lg font-heading font-medium" href="#">Gig details</a><a className="inline-block w-full md:w-auto text-lg font-heading font-medium" href="#">Reviews (# of reviews)</a>
+                    <button
+                    className={`inline-block w-full md:w-auto mb-4 md:mb-0 md:mr-20 lg:mr-36 text-lg font-heading font-medium ${activeTab === 'gig-description' ? 'active-tab' : ''}`}
+                    onClick={() => toggleTab('gig-description')}
+                    >
+                    Gig Description
+                    </button>
+                    <button
+                    className={`inline-block w-full md:w-auto text-lg font-heading font-medium ${activeTab === 'gig-reviews' ? 'active-tab' : ''}`}
+                    onClick={() => toggleTab('gig-reviews')}
+                    >
+                    Reviews
+                    </button>
                 </div>
+
+                {activeTab === 'gig-description' && (
+                    <div id="gig-description" className="tab-content">
+                    <h2 className='my-16 text-center text-2xl md:text-xl lg:text-4xl font-heading font-medium'>About the gig...</h2>
+                    <p>{gigData.description}</p>
+                    </div>
+                )}
+
+                {activeTab === 'gig-reviews' && (
+                    <div id="gig-reviews" className="tab-content">
+                    <ReviewList gigId={gigId}/>
+                    </div>
+                )}
                 </div>
+                
             </div>
             </section>
           </>

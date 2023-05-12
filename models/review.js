@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const ReviewSchema = new Schema({
-  rating: {
-    type: Number,
+  title: {
+    type: String,
     required: true,
   },
   description: {
@@ -15,6 +15,11 @@ const ReviewSchema = new Schema({
     ref: "User",
     required: true,
   },
+  gig: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Gig",
+    required: true
+  }  
 }, {
     timestamps: true,
 });

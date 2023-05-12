@@ -3,7 +3,7 @@ const router = express.Router();
 const reviewsCtrl = require('../../controllers/api/reviews');
 
 // GET /api/reviews
-router.get('/', reviewsCtrl.index);
+router.get('/:id', reviewsCtrl.index);
 
 // GET /api/reviews/new
 router.post('/new', reviewsCtrl.newReview);

@@ -19,22 +19,22 @@ async function index(req, res) {
 async function newReview(req, res) {
     const newReview = new Review({
         user: req.user._id, 
-        rating: req.body.rating, 
+        title: req.body.title, 
         description: req.body.description,
+        gig: req.body.gig
       });  
       newReview.save()
         .then(() => {
           res.status(201).json(newReview);
         })
         .catch((error) => {
-          res.status(500).json({ error: error.message });
+          res.status(503).json({ error: error.message });
         });
 }
 
 async function editReview(req, res) {
     const id = req.params.id;
     const updatedReview = {
-        rating: req.body.rating, 
         description: req.body.description,
     };
     Review.findByIdAndUpdate(id, updatedReview, { new: true })

@@ -28,10 +28,10 @@ export default function GigForm() {
     setDescription(description);
   };
 
-  const handlePhotoInput = (e) => {
-    const photo = e.target.files[0];
-    setPhoto(photo)
-  }
+  // const handlePhotoInput = (e) => {
+  //   const photo = e.target.files[0];
+  //   setPhoto(photo)
+  // }
 
 
   const handleSubmit = async (e) => {
@@ -46,7 +46,7 @@ export default function GigForm() {
       const response = await createGig(formData);
       console.log('response:', response);
       console.log('Gig saved to database');
-      setGig(formData);
+      // setGig(formData);
       localStorage.setItem('gig', JSON.stringify(formData));
       navigate('/gigs');
     } catch (error) {
