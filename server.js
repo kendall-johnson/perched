@@ -16,6 +16,7 @@ app.use(require('./config/checkToken'));
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/gigs', require('./routes/api/gigs'));
 app.use('/api/reviews', require('./routes/api/reviews'));
+app.use('/api/skills', require('./routes/api/skills'));
 
 
 const ensureLoggedIn = require('./config/ensureLoggedIn');

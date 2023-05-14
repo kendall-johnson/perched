@@ -2,8 +2,9 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import * as userService from '../../utilities/users-service';
 
+
 export default function Navbar({user, updateUser}) {
-    function handleLogOut() {
+  function handleLogOut() {
         userService.logOut();
         updateUser(null);
       }
@@ -25,9 +26,27 @@ export default function Navbar({user, updateUser}) {
         <div className="hidden lg:block ml-auto mr-14">
           <ul className="inline-flex">
             <li className="mr-8"><Link className="inline-block font-bold text-white hover:text-gray-200" aria-current="page" to="/">Home</Link></li>
-            <li className="mr-8"><Link className="inline-block font-bold text-white hover:text-gray-200" to="/graphics">Graphics & Design</Link></li>
-            <li className="mr-8"><Link className="inline-block font-bold text-white hover:text-gray-200" to="/video">Video & Animation</Link></li>
-            <li><Link className="inline-block font-bold text-white hover:text-gray-200" to="/music">Music & Audio</Link></li>
+            <li className="mr-8"><Link className="inline-block font-bold text-white hover:text-gray-200" to="/graphics">View Gigs</Link></li>
+            {user && user.userType === 'freelancer' && (
+                <li className="mr-8">
+                  <Link
+                    className="inline-block font-bold text-white hover:text-gray-200"
+                    to="/create-gig"
+                  >
+                    Create Gig
+                  </Link>
+                </li>
+              )}
+            {user && (
+                <li className="mr-8">
+                  <Link
+                    className="inline-block font-bold text-white hover:text-gray-200"
+                    to={`/profile/${user._id}`}
+                  >
+                    Profile
+                  </Link>
+                </li>
+              )}
           </ul>
         </div>
         {user ? 

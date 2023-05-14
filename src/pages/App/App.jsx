@@ -8,6 +8,7 @@ import GigsPage from '../GigsPage/GigsPage';
 import GigForm from '../../components/GigForm/GigForm';
 import Navbar from '../../components/Navbar/Navbar';
 import GigPage from '../GigPage/GigPage';
+import ProfilePage from '../ProfilePage/ProfilePage';
 
 
 
@@ -42,6 +43,7 @@ function App() {
                   <Route path="/gigs" element={<GigsPage user={user} />} />
                   <Route path="/create-gig" element={<GigForm user={user} />} />
                   <Route path="/gigs/:gigId" element={<GigPage />} />
+                  <Route path="/profile/:userId" element={<ProfilePage user={user} />} />
                   <Route path="*" element={<Navigate to="/gigs" />} />
                 </Routes>
               </div>
