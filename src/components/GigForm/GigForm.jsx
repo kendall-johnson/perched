@@ -93,7 +93,7 @@ export default function GigForm() {
                     </svg>
                   </span>
                   <select className="w-full py-4 text-gray-50 placeholder-gray-50 appearance-none bg-transparent outline-none" id="formInput1-7" name="category" onChange={handleCategoryChange}>
-                    <option value='Graphics'></option>
+                    <option value=''></option>
                     <option className="bg-gray-500" value="Graphics">Graphics & Design</option>
                     <option className="bg-gray-500" value="Video">Video & Animation</option>
                     <option className="bg-gray-500" value="Music">Music & Audio</option>
