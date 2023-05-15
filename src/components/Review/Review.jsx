@@ -4,7 +4,6 @@ export default function Review({ gigId }) {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    // Fetch reviews for the specific gigId
     async function fetchReviews() {
       try {
         const response = await fetch(`/api/reviews/${gigId}`); 
@@ -41,7 +40,6 @@ export default function Review({ gigId }) {
                       {review.description}
                     </p>
                   </div>
-                  {/* Add other components or data to display for each review */}
                 </div>
               </div>
             </div>

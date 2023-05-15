@@ -55,7 +55,7 @@ export default function SkillCard({user}) {
           <ul className="list-disc pl-6">
             {skills.map((skill, index) => (
               <li key={index} className="mb-2">
-                {skill.skill} {/* Display the skill property */}
+                {skill.skill}
               </li>
             ))}
           </ul>
