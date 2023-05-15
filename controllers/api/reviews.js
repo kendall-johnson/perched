@@ -3,8 +3,6 @@ const Review = require('../../models/review')
 module.exports = {
     index,
     newReview,
-    editReview,
-    deleteReview
 }
 
 async function index(req, res) {
@@ -30,26 +28,4 @@ async function newReview(req, res) {
         .catch((error) => {
           res.status(503).json({ error: error.message });
         });
-}
-
-async function editReview(req, res) {
-    const id = req.params.id;
-    const updatedReview = {
-        description: req.body.description,
-    };
-    Review.findByIdAndUpdate(id, updatedReview, { new: true })
-      .then(review => res.json(review))
-      .catch(err => res.status(500).json({ message: err.message }));
-}
-
-async function deleteReview(req, res) {
-    const id = req.params.id;
-    Review.findByIdAndRemove(id)
-      .then(review => {
-        if (!review) {
-          return res.status(404).json({ message: "Review not found" });
-        }
-        res.json({ message: "Review successfully deleted" });
-      })
-      .catch(err => res.status(500).json({ message: err.message }));
 }

@@ -1,20 +1,16 @@
 const express = require('express');
 const router = express.Router();
 const gigsCtrl = require('../../controllers/api/gigs');
+const ensureLoggedIn = require('../../config/ensureLoggedIn');
 
-// GET /api/gigs
+
 router.get('/', gigsCtrl.index);
-
 router.get('/:id', gigsCtrl.getGig)
 
-// GET /api/gigs/new
-router.post('/new', gigsCtrl.newGig);
+router.post('/new', ensureLoggedIn, gigsCtrl.newGig);
+router.put('/:id', ensureLoggedIn, gigsCtrl.editGig);
 
-// POST /api/gigs/:id
-router.put('/:id', gigsCtrl.editGig);
-
-// DELETE /api/gigs/:id
-router.delete('/:id', gigsCtrl.deleteGig);
+router.delete('/:id', ensureLoggedIn, gigsCtrl.deleteGig);
 
 
 module.exports = router;

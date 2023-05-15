@@ -13,7 +13,7 @@ export default function SignUpForm({  setUser,  showLogin, setShowLogin }) {
     error: '',
   });
 
-  const handleSubmit = async (evt) => {
+  async function handleSubmit(evt) {
     evt.preventDefault();
     try {
       const { error, confirm, ...data } = formData;
@@ -25,7 +25,7 @@ export default function SignUpForm({  setUser,  showLogin, setShowLogin }) {
     }
   };
 
-  const handleChange = (evt) => {
+  function handleChange(evt) {
     setFormData({
       ...formData,
       [evt.target.name]: evt.target.value,
@@ -151,6 +151,7 @@ export default function SignUpForm({  setUser,  showLogin, setShowLogin }) {
                         className="block appearance-none w-full bg-gray-100 border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                         required={true}
                       >
+                        <option value='customer'></option>
                         <option value="customer">Customer</option>
                         <option value="freelancer">Freelancer</option>
                       </select>

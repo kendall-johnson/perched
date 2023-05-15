@@ -1,17 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Footer from '../../components/Footer/Footer'
-import Navbar from '../../components/Navbar/Navbar'
 
 export default function HomePage({ user, updateUser }) {
   return (
     <>
     <section className="relative xl:pb-52 bg-black overflow-hidden">
-  <div className="hidden xl:block absolute bottom-0 left-0 ml-20 2xl:ml-52 px-20">
-    <img className="animate-bouncingSlow max-w-sm xl:max-w-md -mb-20" src="" alt=""/>
-    <img className="absolute top-0 left-1/2 mt-20 transform -translate-x-1/2" src="" alt=""/>
+    <div className="hidden xl:block absolute bottom-0 left-0 ml-20 2xl:ml-52 px-20">
+    <img className="animate-pulse max-w-sm xl:max-w-md -mb-20" src="https://shuffle.dev/suncealand-assets/background/red-lines.svg" alt="" />
   </div>
-  <Navbar />
   <div className="container px-4 mx-auto">
     <div className="relative pt-28 xl:pt-52 mb-24 xl:mb-0">
       <div className="max-w-lg mx-auto xl:mr-0 relative">

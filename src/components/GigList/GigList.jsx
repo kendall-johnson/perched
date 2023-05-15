@@ -14,11 +14,9 @@ export default function GigList() {
     },[])
   return (
     <>
-       
-            {gigs.map((gig) => (
-                <Gig key={gig._id} gig={gig} />
-            ))}
-      
+      {gigs.map((gig) => (
+        <Gig key={gig._id} gig={gig} />
+      ))}
     </>
   )
 }

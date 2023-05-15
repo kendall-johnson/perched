@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useDebugValue, useEffect, useState } from 'react';
 import { createReview } from '../../utilities/reviews-api';
 
 export default function ReviewForm({gigId}) {
@@ -24,15 +24,15 @@ export default function ReviewForm({gigId}) {
       }
       try {
         const response = await createReview(newReview);
-        console.log('response:', response)
         setReview(newReview);
+        setTitle('');
+        setDescription(''); 
         localStorage.setItem('review', JSON.stringify(newReview));
       } catch (error) {
         console.error(error);
       }
     }
 
-    
   return (
     <>
       <h1 className='inline-block my-5 text-3xl font-heading font-medium  hover:text-darkBlueGray-700'>Write a Review!</h1>

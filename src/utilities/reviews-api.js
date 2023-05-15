@@ -7,15 +7,5 @@ export function getReview(gigId) {
 }
 
 export function createReview(newReview){
-    console.log(newReview)
   return sendRequest(`${BASE_URL}/new`, 'POST', newReview)
-}
-
-export function editReview(id, formData) {
-  return sendRequest(`${BASE_URL}/${id}`, 'PUT', formData);
-}
-
-
-export function deleteReview(id) {
-  return sendRequest(`${BASE_URL}/${id}`, 'DELETE');
 }

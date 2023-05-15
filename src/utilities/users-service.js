@@ -1,18 +1,14 @@
 import * as usersAPI from './users-api'
 
 export async function signUp(userData){
-  console.log(userData)
   const token = await usersAPI.signUp(userData)
   localStorage.setItem('token', token)
   return getUser()
 }
 
 export async function login(credentials) {
-  console.log(credentials)
   const token = await usersAPI.login(credentials);
-  console.log(token)
   localStorage.setItem('token', token);
-  console.log(token)
   return getUser();
 }
 

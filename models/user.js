@@ -21,7 +21,11 @@ const userSchema = new Schema({
   userType: {
     type: String,
     required: true
-  }
+  },
+  skills: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Skill'
+  }]
 }, {
   timestamps: true,
   toJSON: {

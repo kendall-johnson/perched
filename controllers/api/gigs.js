@@ -31,7 +31,7 @@ async function newGig(req, res) {
       title: req.body.title,
       description: req.body.description,
       category: req.body.category,
-      // tier: req.tier._id,
+      price: req.body.price
     });
 
     // Add the S3 URLs and keys for the uploaded photos to the newGig object
@@ -58,18 +58,8 @@ async function editGig(req, res) {
     title: req.body.title,
     description: req.body.description,
     category: req.body.category,
+    price: req.body.price
   };
-
-  // If there are photos in the request, update the photo field
-  if (req.files) {
-    const photos = req.files.map((file) => ({
-      url: file.location,
-      key: file.key,
-    }));
-    updatedGig.photo = photos;
-  }
-
-  // Find the gig by ID and update it
   Gig.findByIdAndUpdate(id, updatedGig, { new: true })
     .then((gig) => res.json(gig))
     .catch((err) => res.status(500).json({ message: err.message }));
@@ -77,27 +67,11 @@ async function editGig(req, res) {
 
 async function deleteGig(req, res) {
   const id = req.params.id;
-
-  // Find the gig by ID and delete it
   Gig.findByIdAndRemove(id)
     .then((gig) => {
       if (!gig) {
         return res.status(404).json({ message: "Gig not found" });
       }
-
-      // If the gig had photos, delete them from S3
-      if (gig.photo && gig.photo.length > 0) {
-        const keys = gig.photo.map((photo) => photo.key);
-        s3.deleteObjects({
-          Bucket: process.env.S3_BUCKET,
-          Delete: {
-            Objects: keys.map((key) => ({ Key: key })),
-          },
-        })
-          .promise()
-          .catch((err) => console.log(err));
-      }
-
       res.json({ message: "Gig successfully deleted" });
     })
     .catch((err) => res.status(500).json({ message: err.message }));

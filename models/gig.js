@@ -38,6 +38,10 @@ const gigSchema = new Schema({
     maxlength: 300,
     required: true
   },
+  price: {
+    type: Number,
+    required: true
+  },
   category: {
     type: String,
     required: true

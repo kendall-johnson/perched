@@ -5,13 +5,9 @@ import "../../index.css"
 import Footer from '../../components/Footer/Footer';
 
 
-
-
-
-
 export default function AuthPage({ setUser }) {
   const [showLogin, setShowLogin] = useState(true);
-
+  
   return (
     <>
     <main className="AuthPage">

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { createSkill, deleteSkill, getSkill } from '../../utilities/skills-api';
+import { createSkill, getSkill } from '../../utilities/skills-api';
+import { updateUserSkills } from '../../utilities/users-api';
 
 export default function SkillCard({user}) {
   const [skills, setSkills] = useState([]);
@@ -9,21 +10,12 @@ export default function SkillCard({user}) {
     if (newSkill.trim() !== '') {
       try {
         const createdSkill = await createSkill({ skill: newSkill });
+        await updateUserSkills(createdSkill.skill._id);
         setSkills([...skills, createdSkill.skill]);
         setNewSkill('');
       } catch (error) {
         console.error(error);
       }
-    }
-  }
-
-  async function handleRemoveSkill(skillToRemove) {
-    const updatedSkills = skills.filter((skill) => skill !== skillToRemove);
-    try {
-      await deleteSkill(skillToRemove);
-      setSkills(updatedSkills);
-    } catch (error) {
-      console.error(error);
     }
   }
 
@@ -38,7 +30,7 @@ export default function SkillCard({user}) {
     };
 
     fetchSkills();
-  }, [skills]); // Specify skills as the dependency
+  }, [newSkill]);
 
   return (
     <>
@@ -63,13 +55,7 @@ export default function SkillCard({user}) {
           <ul className="list-disc pl-6">
             {skills.map((skill, index) => (
               <li key={index} className="mb-2">
-                {skill}
-                <button
-                  onClick={() => handleRemoveSkill(skill)}
-                  className="ml-2 text-red-600 hover:text-red-800 focus:outline-none"
-                >
-                  Remove
-                </button>
+                {skill.skill} {/* Display the skill property */}
               </li>
             ))}
           </ul>

@@ -9,16 +9,6 @@ export function getSkill(userId) {
   return sendRequest(`${BASE_URL}/${userId}`)
 }
 
-
 export function createSkill(skillData){
   return sendRequest(`${BASE_URL}/new`, 'POST', skillData)
-}
-
-export function editSkill(id, skillData) {
-  return sendRequest(`${BASE_URL}/${id}`, 'PUT', skillData);
-}
-
-
-export function deleteSkill(id) {
-  return sendRequest(`${BASE_URL}/${id}`, 'DELETE');
 }

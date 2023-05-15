@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
   return (
@@ -43,19 +44,16 @@ export default function Footer() {
               </ul>
             </div>
             <div className="w-full xs:w-1/2 sm:w-1/3 px-4 mb-10">
-              <h4 className="font-heading text-3xl font-medium mb-8">Categories</h4>
+              <h4 className="font-heading text-3xl font-medium mb-8">Gigs</h4>
               <ul>
-                <li className="mb-2"><a className="inline-block text-2xs" href="#">Graphics & Design</a></li>
-                <li className="mb-2"><a className="inline-block text-2xs" href="#">Video & Animation</a></li>
-                <li className="mb-2"><a className="inline-block text-2xs" href="#">Music & Audio</a></li>
-                <li className="mb-2"><a className="inline-block text-2xs" href="#">Programming & Web Development</a></li>
+                <li className="mb-2"><Link className="inline-block text-2xs" to="/gigs">View All</Link></li>
               </ul>
             </div>
             <div className="w-full xs:w-1/2 sm:w-1/3 px-4 mb-10">
-              <h4 className="font-heading text-3xl font-medium mb-8">The Team</h4>
+              <h4 className="font-heading text-3xl font-medium mb-8">Behind Perched</h4>
               <ul>
-                <li className="mb-2"><a className="inline-block text-2xs" href="#">LinkedIn</a></li>
-                <li className="mb-2"><a className="inline-block text-2xs" href="#">GitHub</a></li>
+                <li className="mb-2"><a className="inline-block text-2xs" href="https://www.linkedin.com/in/kendalljohnson-se/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li className="mb-2"><a className="inline-block text-2xs" href="https://github.com/kendall-johnson" target="_blank" rel="noopener noreferrer">GitHub</a></li>
               </ul>
             </div>
           </div>

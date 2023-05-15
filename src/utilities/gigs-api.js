@@ -11,12 +11,11 @@ export function getGig(gigId) {
 }
 
 export function createGig(formData){
-    console.log(formData)
   return sendRequest(`${BASE_URL}/new`, 'POST', formData)
 }
 
-export function editGig(id, formData) {
-  return sendRequest(`${BASE_URL}/${id}`, 'PUT', formData);
+export function updateGig(gigId, updatedGig) {
+  return sendRequest(`${BASE_URL}/${gigId}`, 'PUT', updatedGig);
 }
 
 

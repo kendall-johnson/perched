@@ -1,20 +1,33 @@
 import React, { useEffect, useState } from 'react'
-import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 import { Link, useParams } from 'react-router-dom'
-import { getGig } from '../../utilities/gigs-api';
-import TierCard from '../../components/TierCard/TierCard';
+import { getGig, deleteGig } from '../../utilities/gigs-api';
 import ReviewList from '../../components/ReviewList/ReviewList';
+import { useNavigate } from 'react-router-dom';
 
-export default function GigPage() {
+export default function GigPage({user}) {
     let { gigId } = useParams();
+    const navigate = useNavigate()
     const [gigData, setGigData] = useState(null);
     const [activeTab, setActiveTab] = useState('gig-description')
 
     const toggleTab = (tab) => {
         setActiveTab(tab);
     };
-    
+
+    function handleDelete() {
+        const confirmed = window.confirm("Are you sure you want to delete your gig?");
+        if (confirmed) {
+          deleteGig(gigData._id)
+            .then(() => {
+              navigate('/gigs')
+            })
+            .catch(error => {
+              console.log("Error deleting gig:", error);
+            });
+        }
+      }
+
     useEffect(() => {
         getGig(gigId)
           .then(data => {
@@ -53,36 +66,12 @@ export default function GigPage() {
                 <li><p className="text-sm font-medium text-gray-500 ">{gigData.title}</p></li>
             </ul>
             <div className="relative container px-4 mx-auto">
-                <div className="hidden md:flex md:absolute left-0 top-0 mt-20 min-w-max px-4 text-center md:flex-col items-center justify-center">
-                <a className="inline-block sm:mb-12 mr-4 sm:mr-0 transform -rotate-90 sm:transform-none hover:text-darkBlueGray-400" href="#">
-                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.54064 7.21015C1.18719 7.59662 0.615928 7.59662 0.265087 7.21015C-0.087058 6.82369 -0.0896663 6.19929 0.265087 5.81282L5.36206 0.289847C5.71421 -0.0966173 6.28416 -0.0966172 6.63892 0.289847L11.7359 5.81282C12.088 6.19785 12.088 6.82369 11.7359 7.21015C11.3824 7.59662 10.8112 7.59662 10.4603 7.21015L5.99853 2.68073L1.54064 7.21015Z" fill="currentColor"></path>
-                    </svg>
-                </a>
-                <a className="h-30 block mb-4 mr-2 sm:mr-0 border border-gray-100 rounded-3xl" href="#">
-                    <img className="h-full w-full" src="" alt=""/>
-                </a>
-                <a className="hidden sm:block h-30 mb-4 mr-2 sm:mr-0 border border-gray-100 rounded-3xl" href="#">
-                    <img className="h-full w-full" src="" alt=""/>
-                </a>
-                <a className="hidden sm:block h-30 mb-4 mr-2 sm:mr-0 rounded-3xl border-2 border-blueGray-500" href="#">
-                    <img className="h-full w-full" src="" alt=""/>
-                </a>
-                <a className="h-30 block mb-4 sm:mb-12 mr-4 sm:mr-0 border border-gray-100 rounded-3xl" href="#">
-                    <img className="h-full w-full" src="" alt=""/>
-                </a>
-                <a className="inline-block transform -rotate-90 sm:transform-none hover:text-darkBlueGray-400" href="#">
-                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.4594 0.289849C10.8128 -0.0966154 11.3841 -0.0966154 11.7349 0.289849C12.0871 0.676313 12.0897 1.30071 11.7349 1.68718L6.63794 7.21015C6.28579 7.59662 5.71584 7.59662 5.36108 7.21015L0.264109 1.68718C-0.0880364 1.30215 -0.0880363 0.676312 0.264109 0.289848C0.617558 -0.096616 1.18882 -0.0966159 1.53966 0.289848L6.00147 4.81927L10.4594 0.289849Z" fill="currentColor"></path>
-                    </svg>
-                </a>
-                </div>
                 <h1 className="mb-24 text-center text-6xl md:text-7xl lg:text-8xl font-heading font-medium">{gigData.title}</h1>
                 <div className="flex flex-wrap -mx-4 mb-14 md:mb-24">
                 <div className="w-full lg:w-1/2 px-4 mb-16 lg:mb-0">
                     <div className="relative w-full md:w-3/4 ml-auto mb-16">
                     <div className="w-4/6 mx-auto">
-                        <img src="" alt=""/>
+                        <img src="https://i.imgur.com/9y6DBEe.png" alt=""/>
                     </div>
                     <button className="absolute top-1/2 left-0 hover:text-darkBlueGray-400 -mt-20 md:-mt-0">
                         <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -95,33 +84,40 @@ export default function GigPage() {
                         </svg>
                     </button>
                     <div className="md:hidden mt-16 px-4 text-center flex items-center justify-center">
-                        <a className="inline-block mr-4 transform -rotate-90" href="#">
-                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.54064 7.21015C1.18719 7.59662 0.615928 7.59662 0.265087 7.21015C-0.087058 6.82369 -0.0896663 6.19929 0.265087 5.81282L5.36206 0.289847C5.71421 -0.0966173 6.28416 -0.0966172 6.63892 0.289847L11.7359 5.81282C12.088 6.19785 12.088 6.82369 11.7359 7.21015C11.3824 7.59662 10.8112 7.59662 10.4603 7.21015L5.99853 2.68073L1.54064 7.21015Z" fill="black"></path>
-                        </svg>
-                        </a>
-                        <a className="h-30 block mr-2 border border-gray-100 rounded-3xl" href="#">
-                        <img className="h-full w-full" src="" alt=""/>
-                        </a>
-                        <a className="h-30 block mr-2 border border-gray-100 rounded-3xl" href="#">
-                        <img className="h-full w-full" src="" alt=""/>
-                        </a>
-                        <a className="h-30 block mr-2 rounded-3xl border-2 border-blueGray-500" href="#">
-                        <img className="h-full w-full" src="" alt=""/>
-                        </a>
-                        <a className="h-30 block mr-4 border border-gray-100 rounded-3xl" href="#">
-                        <img className="h-full w-full" src="" alt=""/>
-                        </a>
-                        <a className="inline-block transform -rotate-90" href="#">
-                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10.4594 0.289849C10.8128 -0.0966154 11.3841 -0.0966154 11.7349 0.289849C12.0871 0.676313 12.0897 1.30071 11.7349 1.68718L6.63794 7.21015C6.28579 7.59662 5.71584 7.59662 5.36108 7.21015L0.264109 1.68718C-0.0880364 1.30215 -0.0880363 0.676312 0.264109 0.289848C0.617558 -0.096616 1.18882 -0.0966159 1.53966 0.289848L6.00147 4.81927L10.4594 0.289849Z" fill="black"></path>
-                        </svg>
-                        </a>
                     </div>
                     </div>
                 </div>
-                <TierCard />
+                <div className="w-full lg:w-1/2 px-4 xl:pl-20">
+                    <div className="max-w-xl mb-6">
+                    <p className="flex items-start mb-8">
+                        <span className="flex items-center text-6xl text-blue-500 font-heading font-medium">
+                        <span className="mr-2 text-xl">$</span>
+                        <span>{gigData.price}</span>
+                        </span>
+                    </p>
+                    <p className="text-lg text-gray-400">{gigData.description}</p>
+                    </div>
+                    <div className="flex flex-wrap -mx-2 mb-12">
+                    <div className="w-full md:w-2/3 px-2 mb-2 md:mb-0"><a className="block py-4 px-2 leading-8 font-heading font-medium tracking-tighter text-xl text-black text-center bg-yellow-700 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 hover:bg-yellow-600 rounded-xl" href="#">Checkout (non-functional)</a></div>
+                    </div>
                 </div>
+                </div>
+                {user && user._id === gigData.user && (
+                <div className="flex justify-center max-w-5xl pb-9 mx-auto">
+                   <Link
+                    className="inline-block w-full md:w-auto mb-4 md:mb-0 md:mr-20 lg:mr-36 text-lg font-heading font-medium"
+                    to={`/edit-gig/${gigId}`}
+                    >
+                    Edit Gig
+                    </Link>
+                    <button
+                    className="inline-block w-full md:w-auto text-lg font-heading font-medium"
+                    onClick={handleDelete}
+                    >
+                    Delete Gig
+                    </button>
+                </div>
+                )}
                 <div className="pt-9 border-t border-gray-100">
                 <div className="flex justify-center max-w-5xl pb-9 mx-auto border-b border-gray-100">
                     <button
@@ -137,7 +133,6 @@ export default function GigPage() {
                     Reviews
                     </button>
                 </div>
-
                 {activeTab === 'gig-description' && (
                     <div id="gig-description" className="tab-content">
                     <h2 className='my-16 text-center text-2xl md:text-xl lg:text-4xl font-heading font-medium'>About the gig...</h2>
@@ -151,7 +146,6 @@ export default function GigPage() {
                     </div>
                 )}
                 </div>
-                
             </div>
             </section>
           </>

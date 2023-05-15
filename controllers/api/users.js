@@ -5,7 +5,8 @@ const bcrypt = require('bcrypt')
 module.exports = {
   create,
   checkToken,
-  login
+  login,
+  updateUserSkills
 }
 
 async function create(req, res){
@@ -19,7 +20,6 @@ async function create(req, res){
 }
 
 function checkToken(req, res) {
-  console.log('req.user', req.user);
   res.json(req.exp);
 }
 
@@ -53,5 +53,25 @@ async function login(req, res) {
           }
   } catch (err) {
     res.status(500).json(err);
+  }
+}
+
+async function updateUserSkills(req, res) {
+  const { skillId } = req.body;
+  const userId = req.user._id;
+
+  try {
+    // Find the user by their ID
+    const user = await User.findById(userId);
+
+    // Add the skill to the user's skills array
+    user.skills.push(skillId);
+
+    // Save the changes to the user document
+    await user.save();
+
+    res.status(200).json({ message: 'User skills updated successfully' });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
   }
 }
