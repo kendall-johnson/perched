@@ -46,60 +46,55 @@ Click the following link to be redirected to the Wireframe, ERD, and Design Insp
 <div align="center">
   <h2>:alarm_clock: Where Perched Began:</h2>
 </div>
-<h2>Lorem Page</h2>
+<h2>The Drawing Board :writing_hand:</h2>
 
-![Lorem Page]()
+![Wireframe](https://i.imgur.com/Re9sLjv.png)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit massa.
+The drawing board takes you on a journey from initial sketches to the final product. Starting with wireframes and conceptual designs, it allows you to lay the foundation and visualize your ideas. Through iteration and refinement, your vision gradually takes shape, culminating in a polished and well-crafted final product. This process empowers you to bring your imagination to life and create meaningful and impactful experiences.
 
-<h2>Lorem Page</h2>
-
-![Lorem Page]()
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit massa.
 
 <div align="center">
  <h2>:camera_flash: Visuals and Helpful Insight: </h2>
 </div>
 
 
-### Lorem Page
+### Home Page
 
-![Lorem Page]()
+![Home Page](https://i.imgur.com/kOT60pr.png)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit massa.
+The Home Page showcases various sections and highlights of the platform, providing a visually appealing overview of its features and services.
 
-### Lorem Page
+### Authorization Page
 
-![Lorem Page]()
+![Sign-Up Page](https://i.imgur.com/IUzwGul.png)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit massa.
+The Authorization Page allows users to sign up or log in to their accounts, providing access to personalized features and functionalities.
 
-### Lorem Page
+### View All Gigs Page
 
-![Lorem Page]()
+![Gigs Page](https://i.imgur.com/tOw1lu9.png)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit massa.
-
-
-### Lorem Page
-
-![Lorem Page]()
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit massa.
+The View All Gigs Page displays a collection of available gigs, allowing users to browse and explore different offerings and services.
 
 
-### Lorem Page
+### Specific Gig Page
 
-![Lorem Page]()
+![Gig Page](https://i.imgur.com/NKlzOdt.png)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit massa.
+The Specific Gig Page provides detailed information about a particular gig, including its description, pricing, and additional details, enabling users to learn more and make informed decisions.
 
-### Lorem Page
 
-![Lorem Page]()
+### Profile Page
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit massa.
+![Profile Page](https://i.imgur.com/YkZGiQC.png)
+
+The Profile Page presents users with their account details, including their name and email address, along with a list of their skills. Users can showcase their expertise by adding their skills, providing a comprehensive overview of their capabilities within the platform. 
+
+### Review Section
+
+![Review Section](https://i.imgur.com/T542YOU.png)
+
+The Review Section displays user reviews and ratings for a specific gig, providing valuable insights and feedback from previous customers to help users evaluate the gig's quality and reputation.
 
 
 <div align="center">
@@ -122,21 +117,37 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 </div>
 
 ```
-  console.log("Take Flight")
+    async function handleSubmit(e) {
+    e.preventDefault();
+    const formData = {
+    'title': title,
+    'category': category,
+    'description': description,
+    'price': price
+    }
+    try {
+      const response = await createGig(formData);
+      localStorage.setItem('gig', JSON.stringify(formData));
+      navigate('/gigs');
+    } catch (error) {
+      console.error(error);
+    }
+  };
 ```
 
-#### The preceeding code displays ...
+#### The preceeding code displays the React form submission for the creation of a gig. This section of code is vital in creating a seamless transition from conception to creation for the user. Compiling all their inputs into a nicely packaged box to send on over to the back-end via the createGig function call.
 
 <div align="center">
  <h2>:chart_with_upwards_trend: Looking Forward (Roadmap) </h2>
 </div>
 Perched is ready to spread it's wings and take flight, but first: 
 
-- [x] Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit massa.
-- [x] Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit massa.
-- [ ] Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit massa.
-- [ ] Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit massa.
-- [ ] Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit massa.
-- [ ] Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit massa.
-- [ ] Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit massa.
-- [ ] Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit massa.
+- [x] Create a Profile page where users can see some quick information regarding their account
+- [x] Create protected routes depending on the type of account you have (i.e. customers cannot create gigs)
+- [ ] Implement Customer-to-Freelancer messaging
+- [ ] Allow for checking out via the Stripe API
+- [ ] Integrate Google oAuth along with other account authorization methods
+- [ ] Create a tier system for gigs to allow for more customization for the Freelancers
+- [ ] Allow for users to keep track of current and previous orders to have full control over their purchases
+- [ ] Include the ability for users to favorite a gig
+- [ ] Implement the ability to upload photos for a gig to provide more insight to your job
