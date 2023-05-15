@@ -25,7 +25,7 @@
 
 **_Click the following link to be redirected to the live version of the code!_** 
 
-## [Perched](https://www.kendalljohnson.dev/)
+## [Perched](https://perched.herokuapp.com/)
 
 ### Description:
 
