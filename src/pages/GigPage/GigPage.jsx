@@ -71,7 +71,7 @@ export default function GigPage({user}) {
                 <div className="w-full lg:w-1/2 px-4 mb-16 lg:mb-0">
                     <div className="relative w-full md:w-3/4 ml-auto mb-16">
                     <div className="w-4/6 mx-auto">
-                        <img src="https://i.imgur.com/9y6DBEe.png" alt=""/>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg" alt=""/>
                     </div>
                     <button className="absolute top-1/2 left-0 hover:text-darkBlueGray-400 -mt-20 md:-mt-0">
                         <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -105,13 +105,13 @@ export default function GigPage({user}) {
                 {user && user._id === gigData.user && (
                 <div className="flex justify-center max-w-5xl pb-9 mx-auto">
                    <Link
-                    className="inline-block w-full md:w-auto mb-4 md:mb-0 md:mr-20 lg:mr-36 text-lg font-heading font-medium"
+                    className="bg-blue-500 py-2 px-2 border-2 border-black rounded-lg inline-block w-full md:w-auto mb-4 md:mb-0 md:mr-20 lg:mr-36 text-lg font-heading font-medium"
                     to={`/edit-gig/${gigId}`}
                     >
                     Edit Gig
                     </Link>
                     <button
-                    className="inline-block w-full md:w-auto text-lg font-heading font-medium"
+                    className="bg-red-500 py-2 px-2 border-2 border-black rounded-lg inline-block w-full md:w-auto text-lg font-heading font-medium"
                     onClick={handleDelete}
                     >
                     Delete Gig
