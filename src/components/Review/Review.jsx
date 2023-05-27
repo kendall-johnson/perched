@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 
-export default function Review({ gigId }) {
+export default function Review({ gigId, reviewCount }) {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
     async function fetchReviews() {
       try {
-        const response = await fetch(`/api/reviews/${gigId}`); 
+        const response = await fetch(`/api/reviews/${gigId}`);
         const data = await response.json();
         setReviews(data);
       } catch (error) {
@@ -15,7 +15,7 @@ export default function Review({ gigId }) {
     }
 
     fetchReviews();
-  }, []);
+  }, [gigId, reviewCount]);
 
   return (
     <>
