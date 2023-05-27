@@ -44,7 +44,11 @@ setError('Log In Failed - Try Again');
                   <span className="ml-6">Back home</span>
                 </Link>
                 <h3 className="font-heading text-4xl mb-10">Sign in to Perched</h3>
-                <p className="font-light mb-32 sm:mb-64">Welcome Back!</p>
+                <p className="font-light mb-10">If you are here to test the functionality, use the following credentials!</p>
+                <div className='bg-white rounded-lg border-black border-4  mb-32 sm:mb-64'>
+                <h3 className="flex justify-center my-4 font-heading text-2xl text-yellow-700">Email: test@gmail.com</h3>
+                <h4 className="flex justify-center my-4 font-light text-blue-600">Password: testing1</h4>
+                </div>
                 <div>
                   <div className="inline-flex items-center py-6 px-6 sm:px-8 shadow bg-white rounded-md">
                     <div className="flex-shrink-0 flex items-center -mr-2 justify-center w-12 h-12 bg-green-800 hover:bg-green-900 rounded-full z-10" >
